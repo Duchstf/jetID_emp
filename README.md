@@ -9,7 +9,28 @@ JetID setup for EMP framework for CMS L1 Trigger.
 
 2. Building 904 setup (optical links connections): https://cms-l1t-phase2.docs.cern.ch/904/overview.html#optical-links
 
-# Seeded Cone Setup Notes
+# EMP Simulation Notes
+
+1. First you need to activate the environment and enable ipbb.
+
+```
+conda activate jetID
+```
+
+```
+source ipbb-dev-2022f/env.sh
+```
+
+2. Then:
+
+```
+ipbb proj create vivado jet-sim correlator-layer2:jet_seededcone top_sim.dep
+cd proj/jet-sim
+ipbb vivado generate-project
+```
+
+
+# EMP Building Notes
 
 1. Go to this website to start:
 
@@ -74,7 +95,7 @@ ipbb vivado synth -j4 impl -j4
 ipbb vivado package
 ```
 
-5. Potential errors:
+6. Potential errors:
 
  ```
  Error: 'gen_ipbus_addr_decode' script not found.
@@ -89,3 +110,4 @@ ipbb vivado package
 Basically you need to follow the presequisite here: https://serenity.web.cern.ch/serenity/emp-fwk/firmware/instructions.html#prerequisites
 
 Just to quote from the website, "in order for the TCDS2 functionality to be correctly implemented and for the command ipbb ipbus gendecoders to run, uHAL needs to be installed." 
+
