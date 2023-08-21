@@ -26,7 +26,7 @@ source ipbb-dev-2022f/env.sh
 ```
 ipbb proj create vivado jet-sim correlator-layer2:jet_seededcone top_sim.dep
 cd proj/jet-sim
-ipbb vivado generate-project
+ipbb vivado generate-project --enable-ip-cache -1
 ```
 
 
