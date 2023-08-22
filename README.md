@@ -67,12 +67,13 @@ source ipbb-dev-2022f/env.sh
 
 Note that you have to setup cmssw for it: 
 
-```
-./utils/setup_cmssw.sh -run CMSSW_12_5_5_patch1 p2l1pfp:L1PF_12_5_X lict-125x-v1.15
-```
 
 ```
 source /cvmfs/cms.cern.ch/cmsset_default.sh
+```
+
+```
+./utils/setup_cmssw.sh -run CMSSW_12_5_5_patch1 p2l1pfp:L1PF_12_5_X lict-125x-v1.15
 ```
 
 ```
